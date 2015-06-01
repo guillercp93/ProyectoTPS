@@ -1,0 +1,82 @@
+extends layout
+
+block content
+	include header.jade
+	
+	each cp in data
+		div#content.center-block
+			label(for="nProyecto") Digite los campos para crear un nuevo caso de prueba: 
+			form(class="form-horizontal" id='plantilla' method='post' href='/edited'+cp.id)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="nProyecto") Titulo proyecto: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='nProyecto' id="nProyecto" value=cp.proyecto)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="idCasoPrueba") ID caso prueba:
+					div(class="col-sm-2")
+						input(class="form-control" type='number' name='idCasoPrueba' id="idCasoPrueba" value=cp.id disabled)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="nombreCP") Título de caso prueba: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='nombreCP' id='nombreCP' value=cp.nombre maxlength="30")
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="descripcion") Descripción: 
+					div(class="col-sm-7")
+						textarea(class="form-control" name='descripcion' id='descripcion' form="plantilla" rows="4" wrap="hard")=cp.descripcion
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="Precondiciones") Precondiciones: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='Precondiciones' id='Precondiciones' value=cp.precondicion)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="casosUso") Casos de uso: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='casosUso' id='casosUso' value=cp.casoDeUso)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="pasosEjecucion") Pasos de ejecucion: 
+					div(class="col-sm-7")
+						textarea(class="form-control" name='pasosEjecucion' id='pasosEjecucion' form="plantilla" rows="4" wrap="hard")=cp.pasosEjecucion
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="rEsperados") Resultados Esperados: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='rEsperados' id='rEsperados' value=cp.resultadosEsperados)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="estados") Estado:
+					div(class="col-sm-2")
+						label
+							input(type='radio' name='estado' value="Exitoso")
+							| Exitoso
+					div(class="col-sm-2")
+						label
+							input(type='radio' name='estado' value="Fallido")
+							| Fallido
+					div(class="col-sm-2")
+						label
+							input(type='radio' name='estado' value="Detenido")
+							| Detenido
+					div(class="col-sm-2")
+						label
+							input(type='radio' name='estado' value="Pendiente")
+							| Pendiente
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="rObtenidos") Resultados Obtenidos: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='rObtenidos' id='rObtenidos' value=cp.resultadosObtenidos)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="error") Errores: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='errores' id='errores' value=cp.errores)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="diseniador") Responsable de diseño: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='diseniador' id='diseniador' value=cp.responsableDisenio)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="ejecutor") Responsable de ejecución: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='ejecutor' id='ejecutor' value=cp.responsableEjecucion)
+				div(class="form-group")
+					label(class="col-sm-2 control-label" for="comentario") Comentarios: 
+					div(class="col-sm-7")
+						input(class="form-control" type='text' name='comentario' id='comentario' value=cp.comentarios)
+					br
+				button(id="botones" class="btn btn-primary" type='submit') Actualizar 
+	include footer.jade

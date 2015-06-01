@@ -1,0 +1,90 @@
+extends layout
+block content
+	include header.jade
+	each cp in data
+		table.table.table-bordered(id="formatoPrueba")
+			tr
+				td.col
+					img(class="logoUnivalle" src="/images/univalle2.png")
+				td
+					b#title Formato de casos de prueba
+			tr
+				th(colspan="2")
+					| Nombre del Proyecto: 
+					span=cp.proyecto
+			tr
+				td
+					span ID caso prueba:
+				td
+					span=cp.id
+			tr
+				td
+					span Nombre caso prueba:
+				td
+					span=cp.nombre
+			tr
+				td
+					span Descripción:
+				td
+					span=cp.descripcion
+			tr
+				td
+					span Precondiciones:
+				td
+					span=cp.precondicion
+			tr
+				td
+					span Casos de uso:
+				td
+					span=cp.casoDeUso
+			tr
+				td
+					span Pasos de ejecucion:
+				td
+					span=cp.pasosEjecucion
+			tr
+				td
+					span Resultados esperados:
+				td
+					span=cp.resultadosEsperados
+			tr
+				td
+					span Estado
+				td
+					span=cp.estado
+			tr
+				td
+					span Resultados Obtenidos: 
+				td
+					span=cp.resultadosObtenidos
+			tr
+				td
+					span Errores
+				td
+					span=cp.errores
+			tr
+				td
+					span Responsable de diseño: 
+				td
+					span=cp.responsableDisenio
+			tr
+				td
+					span Responsable de ejecución:
+				td
+					span=cp.responsableEjecucion
+			tr
+				td
+					span Comentarios:
+				td
+					span=cp.comentarios
+		div.descarga.row
+			div.col-sm-4
+				<!-- a(href="http://localhost:8080/details/001" download) -->
+				a(href="javascript:downloadPDF()" class="glyphicon glyphicon-download-alt") Descargar como PDF
+			div.col-sm-2
+				a(href="/edit/"+cp.id class='glyphicon glyphicon-pencil') Editar
+			div.col-sm-2
+				a(href="/deleted/"+cp.id class="glyphicon glyphicon-trash") Borrar
+		script(type="text/javascript" src="/javascripts/script.js")
+	include footer.jade
+

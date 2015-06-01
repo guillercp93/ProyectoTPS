@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	include header.jade
+	div.container
+		strong#title Bienvenido
+		div.row
+		each cp in data
+			div.itemCP.col-md-4
+				a(href="details/"+cp.id id="nombreCU")=cp.nombre
+				a(href="deleted/"+cp.id class="glyphicon glyphicon-trash")
+				a(href="edit/"+cp.id class='glyphicon glyphicon-pencil')
+				p=cp.descripcion
+	include footer.jade
