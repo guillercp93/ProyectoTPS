@@ -6,16 +6,15 @@ module.exports = function(app) {
   findAllCP = function(req, res) {
   	CasoPrueba.find(function(err, casosPruebas) {
   		if(!err) {
-  			res.render('index', {title: 'Inicio', data: casosPruebas});
+  			res.render('index', {title: 'Inicio', data: casosPruebas, tipo: "", mensaje: ""});
   		} else {
-  			console.log('ERROR: ' + err);
+  			res.send(500, err.message);
   		}
   	});
   };
 
   //POST - Inserta un nuevo caso de prueba en la BD
   addCP = function(req, res) {
-    console.log(req.body);
   	var casoPrueba = new CasoPrueba({
         proyecto:req.body.nProyecto,
         id:req.body.idCasoPrueba,
@@ -35,7 +34,13 @@ module.exports = function(app) {
 
   	casoPrueba.save(function(err, casoPrueba) {
   		if(!err) {
-  			res.redirect('/');
+          CasoPrueba.find(function(err, casosPruebas) {
+            if(!err) {
+              res.render('index', {title: 'Inicio', data: casosPruebas, tipo: "alert alert-success", mensaje: "caso de prueba creado correctamente!"});
+            } else {
+              res.render('index', {title: 'Inicio', data: casosPruebas, tipo: "alert alert-danger", mensaje: "no se pudo crear el caso de prueba"});
+            }
+          });
   		} else {
   			return res.send(500, err.message);
   		}
@@ -62,7 +67,13 @@ module.exports = function(app) {
         comentarios:req.body.comentario
     }, {overwrite: true}, function(err) {
       if (!err) {
-        res.redirect('/');
+        CasoPrueba.find(function(err, casosPruebas) {
+          if(!err) {
+            res.render('index', {title: 'Inicio', data: casosPruebas, tipo: "alert alert-success", mensaje: "caso de prueba actualizado correctamente!"});
+          } else {
+            res.render('index', {title: 'Inicio', data: casosPruebas, tipo: "alert alert-danger", mensaje: "no se pudo actualizar el caso de prueba"});
+          }
+        });
       }else{
         console.log('No se pudo actualizar');
       }

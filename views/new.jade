@@ -8,35 +8,35 @@ block content
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="nProyecto") Titulo proyecto: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='nProyecto' id="nProyecto" maxlength="80" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='nProyecto' id="nProyecto" maxlength="80" pattern="[a-zA-Z0-9 ]*" title="Titulo inválido: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="idCasoPrueba") ID caso prueba:
 				div(class="col-sm-2")
 					input(class="form-control" type='number' name='idCasoPrueba' id="idCasoPrueba" maxlength="3" required)
 			div(class="form-group")
-				label(class="col-sm-2 control-label" for="nombreCP") Título de caso prueba: 
+				label(class="col-sm-2 control-label" for="nombreCP") Nombre de caso prueba: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='nombreCP' id='nombreCP' maxlength="80" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='nombreCP' id='nombreCP' maxlength="80" pattern="[a-zA-Z0-9 ]*" title="nombre caso de prueba inválido: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="descripcion") Descripción: 
 				div(class="col-sm-7")
-					textarea(class="form-control" name='descripcion' id='descripcion' form="plantilla" rows="4" wrap="hard" maxlength="300" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					textarea(class="form-control" name='descripcion' id='descripcion' form="plantilla" rows="4" wrap="hard" maxlength="300" pattern="[a-zA-Z0-9 ]*" title="descripción inválido: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="Precondiciones") Precondiciones: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='Precondiciones' id='Precondiciones' maxlength="100" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='Precondiciones' id='Precondiciones' maxlength="100" pattern="[a-zA-Z0-9 ]*" title="precondiciones invalidas: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="casosUso") Casos de uso: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='casosUso' id='casosUso' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='casosUso' id='casosUso' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Casos de uso inválidos: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="pasosEjecucion") Pasos de ejecucion: 
 				div(class="col-sm-7")
-					textarea(class="form-control" name='pasosEjecucion' id='pasosEjecucion' form="plantilla" rows="4" wrap="hard" maxlength="300" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					textarea(class="form-control" name='pasosEjecucion' id='pasosEjecucion' form="plantilla" rows="4" wrap="hard" maxlength="300" pattern="[a-zA-Z0-9 ]*" title="pasos de ejecución inválidos: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="rEsperados") Resultados Esperados: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='rEsperados' id='rEsperados' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='rEsperados' id='rEsperados' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Resultados esperados inválidos: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="estados") Estado:
 				div(class="col-sm-2")
@@ -58,23 +58,23 @@ block content
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="rObtenidos") Resultados Obtenidos: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='rObtenidos' id='rObtenidos' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='rObtenidos' id='rObtenidos' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Resultados Obtenidos inválidos: sólo letras y/o números" required)
 			div(class="form-group")
-				label(class="col-sm-2 control-label" for="error") Errores: 
+				label(class="col-sm-2 control-label" for="errores") Errores: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='errores' id='errores' maxlength="100" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='errores' id='errores' maxlength="100" pattern="[a-zA-Z0-9 ]*" title="errores inválidos: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="diseniador") Responsable de diseño: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='diseniador' id='diseniador' maxlength="80" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='diseniador' id='diseniador' maxlength="80" pattern="[a-zA-Z0-9 ]*" title="responsable diseño inválido: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="ejecutor") Responsable de ejecución: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='ejecutor' id='ejecutor' maxlength="80" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='ejecutor' id='ejecutor' maxlength="80" pattern="[a-zA-Z0-9 ]*" title="responsable ejecución inválido: sólo letras y/o números" required)
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="comentario") Comentarios: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='comentario' id='comentario' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Sólo son permitidas letras y números" required)
+					input(class="form-control" type='text' name='comentario' id='comentario' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Comentarios inválidos: sólo letras y/o números")
 				br
 			button(id="botones" class="btn btn-primary" type='submit') Crear 
 	include footer.jade
