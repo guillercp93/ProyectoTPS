@@ -9,8 +9,8 @@ block content
 		div.row
 		each cp in data
 			div.itemCP.col-md-4
-				a(href="details/"+cp.id class="nombreCU")=cp.nombre
-				a(href="deleted/"+cp.id class="glyphicon glyphicon-trash")
-				a(href="edit/"+cp.id class='glyphicon glyphicon-pencil')
+				a(href="/details/"+cp.id class="nombreCU")=cp.nombre
+				a(href="/deleted/"+cp.id class="glyphicon glyphicon-trash")
+				a(href="/edit/"+cp.id class='glyphicon glyphicon-pencil')
 				p=cp.descripcion
 	include footer.jade

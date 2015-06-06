@@ -16,7 +16,7 @@ module.exports = {
 			.setValue('input[name=errores]', 'ninguno')
 			.setValue('input[name=diseniador]', 'Andrea Mora')
 			.setValue('input[name=ejecutor]', 'Guillermo Castillo')
-			.setValue('input[name=comentario]', 'n3n')
+			.setValue('textarea[name=comentario]', 'Todos estos datos han sido llenados por el framework NightWatch -o-')
 	},
 
 	'Enviar datos al formulario': function(cliente) {

@@ -74,7 +74,7 @@ block content
 			div(class="form-group")
 				label(class="col-sm-2 control-label" for="comentario") Comentarios: 
 				div(class="col-sm-7")
-					input(class="form-control" type='text' name='comentario' id='comentario' maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Comentarios inválidos: sólo letras y/o números")
+					textarea(class="form-control" name='comentario' id='comentario' form="plantilla" rows="4" wrap="hard" maxlength="150" pattern="[a-zA-Z0-9 ]*" title="Comentarios inválidos: sólo letras y/o números")
 				br
 			button(id="botones" class="btn btn-primary" type='submit') Crear 
 	include footer.jade

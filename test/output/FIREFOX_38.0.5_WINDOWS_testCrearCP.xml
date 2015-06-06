@@ -5,14 +5,14 @@
 
   <testsuite name="testCrearCP"
     errors="0" failures="0" hostname="" id="" package="testCrearCP" skipped="0"
-    tests="2" time="15.29" timestamp="Fri, 05 Jun 2015 19:53:06 GMT">
+    tests="2" time="15.63" timestamp="Sat, 06 Jun 2015 00:21:27 GMT">
   
-    <testcase name="LLenar formulario de caso de prueba" time="13.60" assertions="1">
+    <testcase name="LLenar formulario de caso de prueba" time="13.77" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Enviar datos al formulario" time="1.688" assertions="1">
+    <testcase name="Enviar datos al formulario" time="1.860" assertions="1">
 
     
     </testcase>

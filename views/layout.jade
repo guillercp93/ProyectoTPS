@@ -5,18 +5,14 @@ html
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     script(src="/javascripts/jquery-2.1.4.min.js")
-    <script type="text/javascript" src="/javascripts/jspdf.js"></script>
-    <script type="text/javascript" src="/javascripts/jspdf.plugin.addimage.js"></script>
-    <script type="text/javascript" src="/javascripts/jspdf.plugin.cell.js"></script>
-    <script type="text/javascript" src="/javascripts/jspdf.plugin.from_html.js"></script>
-    <script type="text/javascript" src="/javascripts/adler32cs.js"></script>
-    <script type="text/javascript" src="/javascripts/jspdf.plugin.javascript.js"></script>
-    <script type="text/javascript" src="/javascripts/jspdf.plugin.sillysvgrenderer.js"></script>
-    <script type="text/javascript" src="/javascripts/jspdf.plugin.split_text_to_size.js"></script>
-    <script type="text/javascript" src="/javascripts/jspdf.plugin.standard_fonts_metrics.js"></script>
-    <script type="text/javascript" src="/javascripts/deflate.js"></script>
-    <script type="text/javascript" src="/javascripts/FileSaver.min.js"></script>
-    <script type="text/javascript" src="/javascripts/downloadify.min.js"></script>
+    script(src="/javascripts/jspdf.js")
+    script(src="/javascripts/jspdf.plugin.standard_fonts_metrics.js") 
+    script(src="/javascripts/jspdf.plugin.split_text_to_size.js")              
+    script(src="/javascripts/jspdf.plugin.from_html.js")
+    script(src='/javascripts/bootstrap.min.js')
+    script(src='/javascripts/libs/Deflate/adler32cs.js')
+    script(src='/javascripts/libs/FileSaver.js/FileSaver.js')
+    script(src='/javascripts/libs/Blob.js/BlobBuilder.js')       
     meta(charset="utf-8")
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
