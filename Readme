@@ -1,0 +1,10 @@
+Este proyecto es creado en NodeJS,
+Es requerido tener MongoDB para el manejo de la base de datos
+Debe iniciar el servidor de BD(mongod)
+
+Para iniciar debe ir a la carpeta del proyecto y ejecutar
+
+node app.js
+
+en el navegador entrar a la URL: 127.0.0.1:8080
+
