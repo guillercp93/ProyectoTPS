@@ -1,17 +1,15 @@
 function downloadPDF(){
-	var pdf = new jsPDF('p','pt','letter'),
-		source = $('#formatoPrueba')[0],
-		specialElementHandlers = {
-			'#detalles': function(element, renderer){
-				return true
-			}
-		};
-	pdf.setFontSize(9);
-	pdf.fromHTML(source, 1, 1, {
-		'width':900,
-		'elementHandlers': specialElementHandlers
-	});
+	var imgData,
+		doc = new jsPDF('p','pt','letter');
 
-	var nombre = decodeURI($('#formatoPrueba tbody tr')[3].getElementsByTagName('span')[1].innerHTML);
-	pdf.save(nombre+".pdf");
+	html2canvas($('#formatoPrueba'), {
+		background: '#fff',
+   		onrendered: function(canvas) {
+   			imgData = canvas.toDataURL('image/jpeg', 1.0);
+			doc.addImage(imgData, 'jpeg', 50, 50);
+			
+			var nombre = decodeURI($('#formatoPrueba tbody tr')[3].getElementsByTagName('span')[1].innerHTML);
+			doc.save(nombre+".pdf");
+  		}
+	});
 }
